@@ -21,14 +21,17 @@ public class MainActivity extends Activity {
         ed1=(EditText)findViewById(R.id.ed1);
         b1=(Button)findViewById(R.id.button);
 
+        Locale locSpanish = new Locale("spa", "ESP");
+
         tts =new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.UK);
+                    tts.setLanguage(locSpanish);
                 }
             }
         });
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
